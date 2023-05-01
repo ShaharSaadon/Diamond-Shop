@@ -1,16 +1,22 @@
-<section  class="diamond-edit">
+<section class="diamond-edit">
     <h2>{{'Add'}} diamond</h2>
-    <form (ngSubmit)="onSaveDiamond()">
+    <form [formGroup]="form" (ngSubmit)="onSaveDiamond()">
         <label for="name">Name</label>
-        <input [(ngModel)]="diamond.name" type="text" name="name" id="name">
-
+        <input type="text" formControlName="name" id="name">
+        <ng-container *ngIf="form.controls['name'] as nameInput">
+            <p class="errors" *ngIf="nameInput.touched &&  nameInput.invalid">
+                <span *ngIf="nameInput.errors?.['required']">name is required!</span>
+                <span *ngIf="nameInput.errors?.['startWithNumber']">Cant start name with number!</span>
+                <span *ngIf="nameInput.errors?.['nameTaken']">Name already taken</span>
+            </p>
+        </ng-container>
         <label for="price">Price</label>
-        <input [(ngModel)]="diamond.price" type="number" name="price" id="price">
+        <input type="number" formControlName="price" id="price">
 
         <label for="collection">Collection</label>
-        <input [(ngModel)]="diamond.collection" type="text" name="collection" id="collection">
-        
-        <img [src]="diamond.imgUrl" alt="">
+        <input type="text" formControlName="collection" id="collection">
+
+        <img [src]="diamond?.imgUrl" alt="">
 
         <button>Save</button>
     </form>

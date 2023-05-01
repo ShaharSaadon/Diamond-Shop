@@ -1,10 +1,49 @@
 <section *ngIf="(diamond$ | async) as diamond" class="diamond-details">
-    <p><b>Name:</b> {{diamond.name}}</p>
-    <p><b>Price:</b> {{diamond.price}}</p>
-    <p><b>collection:</b> {{diamond.collection}}</p>
     <img [src]="diamond.imgUrl" alt="">
-    <section class="actions">
-        <button class="back-btn" (click)="onBack()">Back</button>
-    </section>
-</section>
+    <div class="content">
+        <p class="diamond-title"> {{diamond.name}}</p>
+        <p class="diamond-price"> $ {{diamond.price}} USD</p>
+        <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minus quaerat vel deleniti odit voluptatum
+            ducimus, ea atque, placeat eos cum alias quibusdam quisquam enim dolore pariatur ipsa, dignissimos suscipit
+            possimus quia obcaecati numquam officia. Nemo laudantium consequuntur, fugit esse inventore sapiente,
+            excepturi dolore atque suscipit voluptatibus beatae in error.
+        </p>
+        <div class="product-features-container">
+            <div class="product-feature">
+                <img src="https://assets.website-files.com/63ef1dc23ff8fd0a899d86bb/63f448da5356873cfad0d7db_shipment.svg"
+                    loading="lazy" alt="" class="product-feature-icon">
+                <p>Free Shipping</p>
+            </div>
+            <div class="product-feature">
+                <img src="https://assets.website-files.com/63ef1dc23ff8fd0a899d86bb/63f5936b81b23542216e8159_fast-delivery.svg"
+                    loading="lazy" alt="" class="product-feature-icon">
+                <p>Fast Delivery</p>
+            </div>
+            <div class="product-feature">
+                <img src="https://assets.website-files.com/63ef1dc23ff8fd0a899d86bb/63f59659b66dd0dc04e5e76a_security.svg"
+                    loading="lazy" alt="" class="product-feature-icon">
+                <p>Secure Payment</p>
+            </div>
+            <div class="product-feature">
+                <img src="https://assets.website-files.com/63ef1dc23ff8fd0a899d86bb/63f596e881b235c55c6ec2e6_return-box.svg"
+                    loading="lazy" alt="" class="product-feature-icon">
+                <p>Free Return</p>
+            </div>
+        </div>
 
+        <div class="order-container">
+            <div class="quantity">
+                <p>Quantity</p>
+                <input type="number">
+            </div>
+
+            <button class="btn-add" (click)="addCart()">Add to Cart</button>
+        </div>
+
+
+        <section class="actions">
+            <button class="back-btn" (click)="onBack()">Back</button>
+        </section>
+    </div>
+</section>

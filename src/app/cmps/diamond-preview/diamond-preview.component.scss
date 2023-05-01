@@ -1,6 +1,32 @@
-.diamond-preview{
+.diamond-preview {
     max-width: 350px;
+
+    .diamond-title {
+        font-family: Gambrino;
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin: 4px;
+    }
+
+    .diamond-price {
+        font-family: Inter;
+        margin: 4px 0;
+    }
 }
-img{
-    width:100%;
+
+.image-container{
+    height: 300px;
+    overflow: hidden;  
+
+    img {
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+        transition: transform .5s, filter 1.5s ease-in-out;
+        filter: grayscale(100%);
+    
+        &:hover {
+            filter: grayscale(0);
+            transform: scale(1.2);
+        }
+    }
 }

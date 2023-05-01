@@ -1,6 +1,14 @@
-<section class="user-index">
-    <diamond-filter></diamond-filter>
-    <a routerLink="/edit">Add Diamond</a>
+<section class="diamond-index">
+    <!-- <diamond-filter></diamond-filter> -->
+    <!-- <a routerLink="edit">Add Diamond</a> -->
+    <h1 class="title">Shop</h1>
+    <div class="collection-container">
+        <div class="vintage collection">Vintage</div>
+        <div class="rings collection">Rings</div>
+        <div class="custom-design collection">Custom Design</div>
+        <div class="clear collection">Clear</div>
+        <div class="earn-rings collection">Earrings</div>
+    </div>
     <diamond-list (remove)="onRemoveDiamond($event)" [diamonds]="diamonds$ | async" ></diamond-list>
 </section>
 

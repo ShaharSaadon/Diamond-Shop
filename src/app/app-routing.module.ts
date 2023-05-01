@@ -9,8 +9,10 @@ import { diamondResolver } from './services/diamond.resolver';
 import { authGuard } from './guards/auth-guard';
 import { SignupModelDrivenComponent } from './views/signup-model-driven/signup-model-driven.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
+import { ShoppingCartComponent } from './views/shopping-cart/shopping-cart.component';
 const routes: Routes = [
   // { path: '', redirectTo:'diamonds', pathMatch: 'full' },
+  
   {
     path: 'diamond/:id',
     component: DiamondDetailsComponent,
@@ -29,6 +31,9 @@ const routes: Routes = [
   },
   {
     path:'signup',component:SignupModelDrivenComponent
+  },
+  {
+    path:'shopping-cart',component:ShoppingCartComponent
   }
 ];
 

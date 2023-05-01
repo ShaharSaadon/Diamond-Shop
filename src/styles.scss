@@ -1,5 +1,5 @@
 html{
-    font-family: Arial, Inter, sans-serif;
+    font-family: Inter, Arial, sans-serif;
     font-weight: 500;
 }
 
@@ -20,3 +20,17 @@ a{
     font-family: Gambarino;
     src: url('./assets/fonts/Gambarino-Regular.otf');
 }
+@font-face {
+    font-family: Inter;
+    src: url('./assets/fonts/Inter-Medium.ttf');
+}
+
+.errors{
+    color:red;
+    margin:0;
+}
+
+p{
+    margin:0;
+}
+

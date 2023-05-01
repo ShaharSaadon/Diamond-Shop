@@ -10,7 +10,8 @@ export class UserService {
     _id: 'u101',
     name: 'Bobovich',
     username: 'Bobo',
-    isAdmin: true
+    isAdmin: true,
+    cart:{products:[],}
   }
 
   constructor() { }

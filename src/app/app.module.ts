@@ -17,6 +17,8 @@ import { DiamondEditComponent } from './views/diamond-edit/diamond-edit.componen
 import { SignupComponent } from './views/signup-template-driven/signup.template.driven.component';
 import { SignupModelDrivenComponent } from './views/signup-model-driven/signup-model-driven.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
+import { LoaderComponent } from './cmps/loader/loader.component';
+import { ShoppingCartComponent } from './views/shopping-cart/shopping-cart.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { HomePageComponent } from './views/home-page/home-page.component';
     SignupComponent,
     SignupModelDrivenComponent,
     HomePageComponent,
+    LoaderComponent,
+    ShoppingCartComponent,
     
   ],
   imports: [

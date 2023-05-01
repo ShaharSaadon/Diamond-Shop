@@ -1,0 +1,59 @@
+.diamond-details{
+    display: grid;
+    grid-template-columns: 45% 45%;
+
+    img{
+        aspect-ratio: 1/1;
+        max-width: 80%;
+    }
+
+    .diamond-title{
+    font-family: Gambrino;
+    font-size: 3rem;
+    }
+
+    .diamond-price{
+        font-family: Gambrino;
+        font-size: 2rem;
+        margin: 12px 0;
+
+    }
+
+    .description{
+        margin-block-end: 12px;
+    }
+
+    .product-features-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 140px);
+        .product-feature{
+            display: flex;
+            align-items: center;
+            gap:8px;
+            img{
+                width: 30px;
+            }
+        }
+    }
+
+    .order-container{
+        margin-block: 24px;
+        display: flex;
+        border-radius: 10px;
+        border: 1px solid black;
+        justify-content: space-between;
+        padding: 18px 12px;
+    }
+
+    .quantity{
+        display: flex;
+
+        input{
+            width: 32px;
+        }
+    }
+
+    .btn-add{
+
+    }
+}

@@ -17,7 +17,6 @@ export class DiamondService {
   private _diamondFilter$ = new BehaviorSubject<DiamondFilter>({ term: '' });
   public diamondFilter$ = this._diamondFilter$.asObservable()
 
-
   constructor() {
     // Handling Demo Data, fetching from storage || saving to storage 
     const diamonds = JSON.parse(localStorage.getItem(ENTITY) || 'null')
@@ -92,7 +91,7 @@ export class DiamondService {
   }
 
   private _addDiamond(diamond: Diamond) {
-    const newDiamond = new Diamond(diamond.name, diamond.collection, diamond.price);
+    const newDiamond = new Diamond(diamond.name, diamond.collection,diamond.price);
     if (typeof newDiamond.setId === 'function') newDiamond.setId(this._getRandomId());
     return from(storageService.post(ENTITY, diamond))
       .pipe(

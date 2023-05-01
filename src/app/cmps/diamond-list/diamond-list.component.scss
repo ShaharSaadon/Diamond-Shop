@@ -1,5 +1,7 @@
 .diamond-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 32px;
+    place-content: center;
 }
+

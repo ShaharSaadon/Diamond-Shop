@@ -1,0 +1,29 @@
+.diamond-index{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    margin:50px auto;
+    font-family: Gambrino;
+    font-size: 4rem;
+}
+
+.collection-container{
+    margin:12px auto;
+    display: flex;
+    gap:24px;    
+}
+
+.collection{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:10px 15px;
+
+    &:hover{
+        background-color: black;
+        color:white;
+        transition: .3s;
+        cursor: pointer;
+    }
+}

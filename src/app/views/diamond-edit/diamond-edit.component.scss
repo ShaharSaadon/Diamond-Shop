@@ -25,6 +25,14 @@
             display: block;
             margin: 20px auto;
         }
+
+        input.ng-touched.ng-invalid {
+            border-left: 5px solid red;
+        }
+
+        input[required].ng-valid.ng-touched {
+            border-left: 5px solid green;
+        }
     }
 }
 
