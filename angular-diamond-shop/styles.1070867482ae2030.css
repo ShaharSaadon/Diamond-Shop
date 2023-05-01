@@ -1,0 +1,1 @@
+html{font-family:Inter,Arial,sans-serif;font-weight:500}a{text-decoration:none;color:inherit}.main-app{display:grid;grid-template-columns:100px 1fr 100px}.main-app>*{grid-column:2}@font-face{font-family:Gambarino;src:url(Gambarino-Regular.7fd382cd0a91c496.otf)}@font-face{font-family:Inter;src:url(Inter-Medium.dde90d17c0af49f4.ttf)}.errors{color:red;margin:0}p{margin:0}
