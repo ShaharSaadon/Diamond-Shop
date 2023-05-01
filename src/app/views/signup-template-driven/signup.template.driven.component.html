@@ -1,0 +1,45 @@
+<section class="flex column">
+    <pre>
+{{form.value|json}}
+    </pre>
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <h2>Template Registration Form</h2>
+        <div class="flex mb-2">
+            <input [(ngModel)]="first" name="first" placeholder="First name" />
+            <input ngModel name="last" class="ml-2" placeholder="Last name" />
+        </div>
+        <input ngModel required minlength="3" name="username" placeholder="Username" #username="ngModel" />
+        <p class="errors" *ngIf="username.invalid && username.touched">
+            <span *ngIf="username.errors?.['required']">Username is required!</span>
+            <span *ngIf="username.errors?.['minlength']">Min length is 3!</span>
+        </p>
+        <div ngModelGroup="address" #address="ngModelGroup">
+            <p>Address</p>
+            <input ngModel name="street" class="mb-2" placeholder="Street" />
+            <div class="flex align-center">
+                <input required ngModel name="city" placeholder="City" class="flex-three" />
+                <select ngModel name="state" class="ml-1">
+                    <option value="" disabled>Select a state</option>
+                    <option value="CA">CA</option>
+                    <option value="NY">NY</option>
+                </select>
+                <input ngModel name="zip" class="ml-1" placeholder="zip" type="number" />
+            </div>
+        </div>
+        {{address.valid}}
+        <p>Would you like a newsletter?</p>
+        <label for="yes">
+            <input ngModel type="radio" id="yes" name="newsletter" value="Yes">
+            Yes
+        </label>
+        <label for="no">
+            <input ngModel type="radio" id="no" name="newsletter" value="No">
+            No
+        </label>
+        <br /> <br />
+        <div align="end">
+            <button [disabled]="form.invalid" md-button color="primary" type="submit">SUBMIT</button>
+        </div>
+    </form>
+</section>

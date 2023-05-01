@@ -1,0 +1,7 @@
+<section class="user-index">
+    <diamond-filter></diamond-filter>
+    <a routerLink="/edit">Add Diamond</a>
+    <diamond-list (remove)="onRemoveDiamond($event)" [diamonds]="diamonds$ | async" ></diamond-list>
+</section>
+
+<router-outlet></router-outlet>

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    font-family: Arial, Inter, sans-serif;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.main-app{
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    > * {
+    grid-column: 2;
+    }
+}
+
+@font-face {
+    font-family: Gambarino;
+    src: url('./assets/fonts/Gambarino-Regular.otf');
+}

@@ -1,0 +1,17 @@
+<section  class="diamond-edit">
+    <h2>{{'Add'}} diamond</h2>
+    <form (ngSubmit)="onSaveDiamond()">
+        <label for="name">Name</label>
+        <input [(ngModel)]="diamond.name" type="text" name="name" id="name">
+
+        <label for="price">Price</label>
+        <input [(ngModel)]="diamond.price" type="number" name="price" id="price">
+
+        <label for="collection">Collection</label>
+        <input [(ngModel)]="diamond.collection" type="text" name="collection" id="collection">
+        
+        <img [src]="diamond.imgUrl" alt="">
+
+        <button>Save</button>
+    </form>
+</section>

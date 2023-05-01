@@ -1,0 +1,10 @@
+<section *ngIf="(diamond$ | async) as diamond" class="diamond-details">
+    <p><b>Name:</b> {{diamond.name}}</p>
+    <p><b>Price:</b> {{diamond.price}}</p>
+    <p><b>collection:</b> {{diamond.collection}}</p>
+    <img [src]="diamond.imgUrl" alt="">
+    <section class="actions">
+        <button class="back-btn" (click)="onBack()">Back</button>
+    </section>
+</section>
+

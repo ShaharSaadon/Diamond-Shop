@@ -1,0 +1,24 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba($color: gray, $alpha:0.2);
+    padding: 20px 0;
+    margin-block-end: 32px;
+
+    .actions{
+        display: flex;
+        gap:10px;
+    }
+    
+    .logo{
+        font-family: Gambarino;
+        font-size:2rem;
+    }
+
+    a{
+        margin-inline-end: 24px;
+    }
+
+   
+}

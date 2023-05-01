@@ -1,0 +1,37 @@
+.main-container {
+    position: relative;
+    .teaser-img {
+        position: relative;
+        overflow: hidden;
+        max-width: 70%;
+        margin-left: auto;
+        border-radius: 10px;
+
+        img {
+            height: 750px;
+        }
+    }
+
+    .content{
+        position: absolute;
+        top: 25%;
+        max-width: 50%;
+        .main-title{
+            font-size:5rem;
+            font-family: Gambrino;
+            font-weight: 500;
+        }
+    }
+}
+
+.explore {
+    display: flex;
+    align-items: center;
+
+    .arrow {
+        border: 1px black solid;
+        border-radius: 50%;
+        padding: 8px;
+        margin-inline-start: 8px;
+    }
+}

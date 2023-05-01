@@ -1,0 +1,10 @@
+<section class="diamond-preview">
+    <a routerLink="/diamond/{{diamond._id}}">
+        {{diamond.name}}
+        {{diamond.collection}}
+    </a>
+    <img [src]="diamond.imgUrl" alt="">
+    <button (click)="onRemoveDiamond()" class="remove-btn">X</button>
+    <a [routerLink]="['/edit', diamond._id]">Edit</a>
+    {{diamond.price}}$
+</section>
